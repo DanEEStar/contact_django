@@ -1,6 +1,5 @@
-(function() {
     var ContactModel = Backbone.Model.extend({
-        urlRoot: "/api/contact",
+        urlRoot: "/api/contact/",
         defaults: {
             name: "",
             email: "",
@@ -11,7 +10,7 @@
 
     var ContactList = Backbone.Collection.extend({
         model: ContactModel,
-        url: "/api/contact"
+        url: "/api/contact/"
     });
 
 
@@ -23,14 +22,19 @@
         mobile: "077..."
     });
 
-    o.save({}, {
-        success: function(model) {
-            console.log("saved", model);
-        },
-        error: function(model) {
-            alert("Failed saving " + model.get("name"));
-        }
-    });
+//    o.save({}, {
+//        success: function(model) {
+//            console.log("saved", model);
+//        },
+//        error: function(model) {
+//            alert("Failed saving " + model.get("name"));
+//        }
+//    });
+    o.save().done(function(data) {
+        console.log(data);
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.log(errorThrown);
+        });
 
 
     var ContactView = Backbone.View.extend({
@@ -90,5 +94,3 @@
 
 
     var App = new AppView;
-
-})()
