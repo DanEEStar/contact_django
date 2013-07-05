@@ -13,9 +13,6 @@
         url: "/api/contact/"
     });
 
-
-
-
     var o = new ContactModel({
         name: "Olivier",
         email: "olivier@...",

@@ -1,0 +1,17 @@
+<h1>Hallo zusammen</h1>
+
+<input ng-model="query">
+
+<p>{{query}}</p>
+
+<div>
+    <p>Name: <input ng-model="p.name"></p>
+    <p>Email: <input ng-model="p.email"></p>
+    <p>Mobile: <input ng-model="p.mobile"></p>
+    <button ng-click="savePerson(p)">Save</button>
+</div>
+
+
+<ul ng-repeat="person in data | filter:query">
+    <li>{{person.name}}</li>
+</ul>
