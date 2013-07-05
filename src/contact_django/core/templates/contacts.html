@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Contact List{% endblock %}
+
+{% block page_title %}Contact List{% endblock page_title %}
+
+{% block content %}
+<h4>Test specific contact</h4>
+<div id="test_contact"></div>
+<h4>Whole contact list</h4>
+<div id="contact_editor">
+    <table id="contact_list"></table>
+</div>
+{% endblock content %}
+
+{% block backbone_templates %}
+<script type="text/template" id="contact_template">
+    <td><%- name %></td>
+    <td><%- email %></td>
+    <td><%- mobile %></td>
+</script>
+{% endblock backbone_templates %}
