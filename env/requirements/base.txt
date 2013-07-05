@@ -6,3 +6,7 @@ logutils==0.3.3
 South==0.8
 
 djangorestframework==2.3.4
+psycopg2==2.4.5
+
+# used for management commands
+-e git://github.com/iterativ/djangojames.git#egg=djangojames

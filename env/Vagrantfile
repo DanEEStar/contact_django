@@ -4,6 +4,6 @@
 Vagrant::Config.run do |config|
   config.vm.box = "precise32"
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
-  config.vm.network :hostonly, "192.168.33.10"
+  config.vm.network :hostonly, "192.168.33.16"
   config.vm.share_folder("v-root", "/srv/www/contact_django/vagrant/contact_django", "../src/contact_django")
 end

@@ -10,6 +10,7 @@
 
 from fabric.api import env
 from vagrant.vagrant import *
+from stage.stage import *
 
 env.rsync_exclude.remove('*.dat')
 env.rsync_exclude = env.rsync_exclude + ['media/']

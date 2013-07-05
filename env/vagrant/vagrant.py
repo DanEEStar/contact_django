@@ -19,7 +19,7 @@ class VagrantEnv(EnvTask):
 
     name = "vagrant"
     def run(self):
-        env.hosts = ['192.168.33.10']
+        env.hosts = ['192.168.33.16']
         env.server_names = ['127.0.0.1', '10.*', '192.168.*']
         env.user = 'vagrant'
         env.key_filename = "~/.vagrant.d/insecure_private_key"
@@ -32,6 +32,6 @@ class VagrantEnv(EnvTask):
         env.debug = True
         env.puppet_temp_dir = '/home/vagrant/puppettmp'
         env.puppet_dir = '/home/vagrant/puppet'
-        env.requirements_file = 'requirements/base.txt'
+        env.requirements_file = 'requirements/dev.txt'
 
 test_local_env = VagrantEnv()
